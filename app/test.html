@@ -1,0 +1,33 @@
+<!-- saved from url=(0032)http://localhost/weixin/test.php -->
+<?php $appurl="http://1.nanyancampus.sinaapp.com";?>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
+  <iframe id="iframe" name="iframe" style="height:400px;width:700px;display:block;">
+  </iframe>
+<li id="results" name="results">
+</li>
+<h1>user list</h1>
+<form target="iframe" action="https://api.weixin.qq.com/cgi-bin/user/get" method="get">
+access_token<input name="access_token">
+<input type="submit" value="submit">
+</form>
+
+<form method="POST" action-target="https://api.weixin.qq.com/cgi-bin/menu/get" target="iframe" form-method="GET" form-type="args" return-type="json">
+<div class="inputDiv">
+<span class="red">*</span> 
+<span class="name">access_token : </span>
+<input type="text" reserved-name="access_token" method="GET" data-type="string" required="true" sync="true">
+<span class="tips">调用接口凭证</span>F
+<span class="errMsg green">校验通过</span>
+<br>
+</div>
+<input type="submit" class="submit" id="submit" value="检查问题">
+</form>
+<h1>user valid</h1>
+<form target="iframe" action="/index_debug.php" method="get">
+signature<input name="access_token" value="730e3111ed7303fef52513c8733b431a0f933c7c43%20">
+nounce<input name="nounce" value="1362771581">
+echostr<input name="echostr" value="5853059253416844429">
+timestamp<input name="timestamp" value="1362713741">
+<input type="submit" value="submit">
+</form>
+</body></html>
